@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+class Book
+{
+    int bookId;
+    string bookName;
+    float price;
+
+public:
+    // Parameterized Constructor
+    Book(int id, string name, float p)
+    {
+        bookId = id;
+        bookName = name;
+        price = p;
+    }
+
+    // Copy Constructor
+    Book(const Book &b)
+    {
+        bookId = b.bookId;
+        bookName = b.bookName;
+        price = b.price;
+    }
+
+    void display()
+    {
+        cout << "Book ID: " << bookId << endl;
+        cout << "Book Name: " << bookName << endl;
+        cout << "Price: " << price << endl;
+    }
+};
+
+int main()
+{
+    Book b1(101, "C++ Programming", 500);
+
+    // Copy constructor called
+    Book b2 = b1;
+
+    cout << "Original Book:" << endl;
+    b1.display();
+
+    cout << "\nCopied Book:" << endl;
+    b2.display();
+
+    return 0;
+}
