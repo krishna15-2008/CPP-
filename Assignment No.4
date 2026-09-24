@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+    int id;
+    string name;
+    float basicSalary, totalSalary;
+
+public:
+
+    // Default Constructor
+    Employee()
+    {
+        id = 0;
+        name = "Unknown";
+        basicSalary = 0;
+        totalSalary = 0;
+    }
+
+    // Parameterized Constructor
+    Employee(int i, string n, float b)
+    {
+        id = i;
+        name = n;
+        basicSalary = b;
+        totalSalary = basicSalary + (basicSalary * 0.20) + (basicSalary * 0.10);
+    }
+
+    void display()
+    {
+        cout << "\nEmployee ID: " << id;
+        cout << "\nEmployee Name: " << name;
+        cout << "\nBasic Salary: " << basicSalary;
+        cout << "\nTotal Salary: " << totalSalary << endl;
+    }
+};
+
+int main()
+{
+    // Default Constructor
+    Employee e1;
+    cout << "Default Constructor:";
+    e1.display();
+
+    // Parameterized Constructor
+    Employee e2(101, "Krishna", 20000);
+    cout << "\nParameterized Constructor:";
+    e2.display();
+
+    return 0;
+}
