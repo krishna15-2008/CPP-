@@ -1,0 +1,93 @@
+#include <iostream>
+#include <string>
+ using namespace std;
+
+class StaticExample {
+private:
+static int count;
+ int id;
+
+public:
+
+StaticExample () {
+
+count++; 
+id count:
+}
+
+static void showCount() {
+
+cout << "Total objects created: << count << endl;
+}
+void display() const {
+
+cout << "Object ID: << id << endl;
+}
+};
+
+int StaticExample::count 0;
+
+class ClassA; 
+class ClassB;
+class Class {
+
+private:
+int value;
+public:
+Class (int v) : valueA (v) {}
+friend void compareValues (Classă &a, ClassB &b); 
+}:
+
+clans ClassB {
+private:
+int valueB;
+Class(int v) valueB(v) {}
+public:
+friend void compareValues (Classa èa, Classß &b);
+};
+
+void compareValues (Classå ka, ClassB &b) {
+
+cout << "Value in ClassA: << a.valued << endl; 
+cout << "Value in ClassB: <<b.valueB << endl; 
+ if (a.valued  b.valueB)
+ cout << "ClassA value is greater" << endl; 
+else if (a.valued < b.valueB) 
+cout << "Classs value is greater" << endl;
+ else 
+cout << "Both values are equal" << endl;
+}
+
+class SecretData {
+private:
+string password;
+int secretNumber;
+public:
+}; SecretData(string p, int n) password (p), secret Number (n){}
+friend class FriendClassExample;
+};
+
+clans Friend ClassExample {
+public:
+
+void displaySecret (SecretData &s) {
+cout << "Password: <<.password <<< endl;
+cout << "Secret Number: << a.secret Number << endl; 
+}
+};
+
+int main() 
+{
+cout <<"===Static Members" << endl;
+StaticExample si, s2, d3; 
+StaticExample:: showCount();
+
+cout << "\n=== Friend Function === " << endl;
+ClassA (50);
+ClassB (30);
+compareValues(a, b);
+
+cout << "\n=== Friend Class ===" << endl; SecretData secret("myPassword123", 999); FriendClassExample friendObj; friendObj.displaySecret (secret);
+
+return 0;
+}
